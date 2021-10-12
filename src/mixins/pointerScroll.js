@@ -23,8 +23,7 @@ export default {
      */
     maybeAdjustScroll() {
       const optionEl =
-        this.$refs.dropdownMenu?.children[this.typeAheadPointer] || false;
-
+        this.$refs.dropdownMenu ? this.$refs.dropdownMenu.children[this.typeAheadPointer] : false
       if (optionEl) {
         const bounds = this.getDropdownViewport();
         const { top, bottom, height } = optionEl.getBoundingClientRect();
